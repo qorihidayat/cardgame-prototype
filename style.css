@@ -1,0 +1,181 @@
+
+body{
+  background-color: rgb(92, 92, 92);
+}
+
+.animate{
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(34, 34, 34, .8);
+  display: none;
+  animation: attack .5s;
+  opacity: 0;
+  transition: all 2s;
+  z-index: 2;
+}
+
+.animate img{
+  position: absolute;
+  width: 300px;
+  z-index: 3;
+  animation: scaled 1s both;
+  transition: all 2s;
+  margin-top: 100px;
+  margin-left: 800px;
+  display: none;
+}
+
+.animate img.show{
+display: block;
+}
+
+.animate.show{
+  display: block;
+  opacity : 1;
+}
+
+.container{
+  margin-top: 50px !important;
+}
+
+.card-panel.alucard{
+  background-image: url('img/alu.jpg');
+}
+.card-panel.miya{
+  background-image: url('img/miya.jpg');
+}
+.card-panel.ling{
+  background-image: url('img/ling.jpg');
+}
+.card-panel.natalie{
+  background-image: url('img/natalie.jpg');
+}
+.card-panel.zilong{
+  background-image: url('img/zilong.jpg');
+}
+
+.card-properti{
+  position: absolute;
+  background-color: rgba(180, 238, 73, .6);
+  transform: translate(-50px, -150px);
+  border-radius: 10px;
+  transition: All 2s;
+  display: none;
+}
+
+.propertiList{
+  display: block;
+}
+
+.card-properti ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+
+}
+
+.card-properti ul li{
+  font-weight: bold;
+  color: rgb(21, 59, 56);
+}
+
+.card-properti ul li:hover{
+  color: white;
+  background-color: rgba(48, 47, 48, .3);
+  border-radius: 3px;
+}
+
+
+.card-panel{
+height: 200px;
+background-size: cover;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+cursor: pointer;
+}
+
+.card-panel.height{
+  height: 550px;
+}
+
+.card-panel:hover{
+  transform: translateY(-20px);
+}
+
+.card-attribute{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(96, 96, 96, .7);
+}
+
+.card-content{
+  background-color: rgba(224, 237, 146, .7);
+  padding: 100px;
+}
+
+.card-action{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-image img{
+
+}
+
+.garis{
+  width: 100%;
+  margin: 50px 0 50px 0;
+  height: 1px;
+  background-color: #bfdf53;
+  display: flex;
+  justify-content: center;
+}
+
+.garis img{
+  position: absolute;
+  transform: translateY(-50px);
+  width: 100px;
+  height: 100px;
+
+}
+
+@keyframes attack{
+0%{
+opacity: 0;
+}
+100%{
+opacity: 1;
+}
+}
+
+@keyframes scaled{
+0%{
+transform: scale(3,3);
+filter: invert(100%);
+
+}
+100%{
+transform: scale(1, 1);
+filter: invert(0%);
+}
+}
+
+@keyframes invert{
+0%{
+filter: invert(0);
+
+}
+100%{
+filter: invert(100%);
+}
+}
